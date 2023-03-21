@@ -54,16 +54,11 @@ public class MorseTranslator {
         morseMap.put("----.", "9");
         morseMap.put("-----", "0");
 
-
-
-
-
-
     }
 
 
-    public char[] translate(String string) {
-        return null;
+    public String translate(String string) {
+        return Arrays.stream(string.split(" ")).map(n -> morseMap.get(n)).collect(Collectors.joining(""));
     }
 
 }
