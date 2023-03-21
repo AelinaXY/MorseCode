@@ -1,5 +1,6 @@
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.stream.*;
+import java.util.Arrays;
+import java.util.Map;
 
 public class MorseTranslator {
 
@@ -58,7 +59,10 @@ public class MorseTranslator {
 
 
     public String translate(String string) {
-        return Arrays.stream(string.split(" ")).map(n -> morseMap.get(n)).collect(Collectors.joining(""));
+        return Arrays
+            .stream(string.split(" "))
+            .map(n -> morseMap.get(n))
+            .collect(Collectors.joining(""));
     }
 
 }
